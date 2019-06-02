@@ -10,16 +10,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
-    <style>
-        body {
-            padding-top: 5rem;
-        }
-
-        .starter-template {
-            padding: 3rem 1.5rem;
-            text-align: center;
-        }
-    </style>
 </head>
 
 <body>
@@ -33,10 +23,16 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Report and analysis</a>
+                    <a class="nav-link" href="#">File upload</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">OpenFace repository</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Our forked OpenFace repository</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Report page's repository</a>
                 </li>
             </ul>
         </div>
@@ -57,9 +53,15 @@
                 <div class="card-body">
                     <h1 class="card-title pricing-card-title">topCamera<small class="text-muted">.json</small></h1>
                     <ul class="list-unstyled mt-3 mb-4">
-                        <li>Needed to observe the grabs.</li>
+                        <li>Product grab events</li>
                     </ul>
-                    <button type="button" class="btn btn-lg mt-5 btn-block btn-info">Upload</button>
+                    <div class="input-group mb-3 mt-5">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="inputFileTopCamera"
+                                aria-describedby="inputGroupFileAddon03">
+                            <label class="custom-file-label text-left" for="inputFileTopCamera">Choose file</label>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="card mb-4 shadow-sm mx-5">
@@ -69,20 +71,32 @@
                 <div class="card-body">
                     <h1 class="card-title pricing-card-title">frontCamera<small class="text-muted">.json</small></h1>
                     <ul class="list-unstyled mt-3 mb-4">
-                        <li>Tracks the subjects gaze.</li>
+                        <li>Subjects gaze tracking</li>
                     </ul>
-                    <button type="button" class="btn btn-lg mt-5 btn-block btn-info">Upload</button>
+                    <div class="input-group mb-3 mt-5">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="inputFileFrontCamera"
+                                aria-describedby="inputGroupFileAddon03">
+                            <label class="custom-file-label text-left" for="inputFileFrontCamera">Choose
+                                file</label>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <!-- add disabled to the classList eventually -->
+        <button id="btn-upload" type="button" value="Upload" class="btn btn-success btn-lg btn-block mt-5">See
+            the results!</button>
 
     </main>
 
-    <footer class="footer mt-auto py-3 fixed-bottom bg-dark">
-        <div class="container">
-            <span class="text-white">Place sticky footer content here.</span>
+    <footer class="footer mt-auto py-2 fixed-bottom bg-dark">
+        <div class="container text-center">
+            <span class="text-white">manGOes &copy;</span>
         </div>
     </footer>
+
+    <script src="index.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

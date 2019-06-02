@@ -1,0 +1,22 @@
+body {
+    padding-top: 5rem;
+}
+
+.starter-template {
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+.custom-file-label::after {
+    color: #e6e6e6;
+    content: 'Browse';
+    background-color: #5975f3;
+}
+
+.btn[value='Upload'] {
+    width: 20%;
+    margin: 0 auto;
+}
+
+.btn.disabled {
+    pointer-events: none;
+}
