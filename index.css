@@ -84,6 +84,10 @@ body {
     font-weight: 500;
 }
 
+.table__title--hot {
+    background: #f95d5d;
+}
+
 .table__col:not(:first-child) {
     border-left: 1px solid #ececec;
 }

@@ -1,13 +1,11 @@
 export default function getData() {
-    // ! analyse the data here and return it
-    return 'to implement';
+    return { gazePerSection, grabTimestamps };
 }
 
 // Data obtained from the files
 const cameraData = getCameraData();
 const gazePerSection = getGazePerSection();
 const grabTimestamps = getGrabTimestamps();
-console.log(grabTimestamps);
 
 // Get data from top and front cameras
 function getCameraData() {
@@ -50,7 +48,6 @@ function getGazePerSection() {
     return gazePerSection;
 }
 
-// ! to implement
 function getGrabTimestamps() {
     return cameraData.top.events.map(event => {
         const properDate = `${cameraData.top.date} ${event}`;
