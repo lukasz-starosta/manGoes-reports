@@ -10,7 +10,7 @@ let file2;
 
 // Change the page
 const uploadButton = document.getElementById('btn-upload');
-uploadButton.onclick = () => (window.location.href = '/processing');
+uploadButton.onclick = () => (window.location.href += '/processing');
 
 // Change labels and watch whether two files have been chosen
 fileHandlers.forEach(handler => {
