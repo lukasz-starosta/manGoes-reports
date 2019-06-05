@@ -1,27 +1,6 @@
 {
-    "date": "Fri Jun 21 2019 14:32:00 GMT+0000 (UTC)",
-    "startTime": "Fri Jun 21 2019 14:32:08 GMT+0000 (UTC)",
-    "endTime": "Fri Jun 21 2019 14:35:15 GMT+0000 (UTC)",
-    "events": [
-        {
-            "in": "Fri Jun 21 2019 14:32:22 GMT+0000 (UTC)",
-            "out": "Fri Jun 21 2019 14:33:03 GMT+0000 (UTC)"
-        },
-        {
-            "in": "Fri Jun 21 2019 14:33:15 GMT+0000 (UTC)",
-            "out": "Fri Jun 21 2019 14:33:38 GMT+0000 (UTC)"
-        },
-        {
-            "in": "Fri Jun 21 2019 14:34:13 GMT+0000 (UTC)",
-            "out": "Fri Jun 21 2019 14:34:36 GMT+0000 (UTC)"
-        },
-        {
-            "in": "Fri Jun 21 2019 14:34:54 GMT+0000 (UTC)",
-            "out": "Fri Jun 21 2019 14:34:57 GMT+0000 (UTC)"
-        },
-        {
-            "in": "Fri Jun 21 2019 14:35:08 GMT+0000 (UTC)",
-            "out": "Fri Jun 21 2019 14:35:12 GMT+0000 (UTC)"
-        }
-    ]
+    "date": "02/06/2019",
+    "events": ["20:12:33", "20:12:36", "20:12:42", "20:13:51", "20:14:52", "20:15:02"],
+    "startTime: ": "20:12:30",
+    "endTime: ": "20:12:37"
 }

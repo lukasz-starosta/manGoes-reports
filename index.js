@@ -39,3 +39,11 @@ function handleFileSaving(file, name) {
 
     filereader.readAsText(file);
 }
+
+// Clear session storage
+if (sessionStorage.has('inputFileTopCamera')) {
+    sessionStorage.removeItem('inputFileTopCamera');
+}
+if (sessionStorage.has('inputFileFrontCamera')) {
+    sessionStorage.removeItem('inputFileFrontCamera');
+}
