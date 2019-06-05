@@ -1,2 +1,18 @@
 import getData from './processJSON.js';
-console.log(getData());
+import Box from './Box.js';
+
+/**
+ * gazePerSection is a map
+ * sectionId => {glances, gazeTime}
+ *
+ * grabTimestamps is an array of timestamps
+ */
+let gazePerSection, grabTimestamps;
+({ gazePerSection, grabTimestamps } = getData());
+
+const gazePerSectionBox = new Box('gaze-per-section-box', ['gazeTime', 'glances', 'section']);
+gazePerSection.forEach((props, sectionId) => {
+    gazePerSectionBox.addResult(gazePerSectionBox.gazeTime, `${props.gazeTime}s`);
+    gazePerSectionBox.addResult(gazePerSectionBox.glances, props.glances);
+    gazePerSectionBox.addResult(gazePerSectionBox.section, sectionId, 'result__section');
+});
