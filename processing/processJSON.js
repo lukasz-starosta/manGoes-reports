@@ -19,28 +19,19 @@ function getCameraData() {
     return { top, front };
 }
 
-// Subtract dateIn from dateOut
-function getTimeDifferenceInSeconds(dateIn, dateOut) {
-    return (new Date(dateOut).getTime() - new Date(dateIn).getTime()) / 1000;
-}
-
 // Get glances and gaze time per section
 function getGazePerSection() {
     const gazePerSection = new Map();
 
     cameraData.front.events.forEach(event => {
         if (gazePerSection.has(event.sectionId)) {
-            const currentGlances = gazePerSection.get(event.sectionId).glances;
-            const currentGazeTime = gazePerSection.get(event.sectionId).gazeTime;
-
-            gazePerSection.set(event.sectionId, {
-                glances: currentGlances + 1,
-                gazeTime: currentGazeTime + getTimeDifferenceInSeconds(event.in, event.out)
-            });
+            const current = gazePerSection.get(event.sectionId);
+            current.glances++;
+            current.events.push({ in: event.in, out: event.out });
         } else {
             gazePerSection.set(event.sectionId, {
                 glances: 1,
-                gazeTime: getTimeDifferenceInSeconds(event.in, event.out)
+                events: [{ in: event.in, out: event.out }]
             });
         }
     });

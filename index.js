@@ -5,9 +5,6 @@ const fileHandlers = [].slice.call(document.querySelectorAll('input[type="file"]
     hasChosenFile: false
 }));
 
-let file1;
-let file2;
-
 // Change the page
 const uploadButton = document.getElementById('btn-upload');
 uploadButton.onclick = () => {
