@@ -10,10 +10,7 @@ let file2;
 
 // Change the page
 const uploadButton = document.getElementById('btn-upload');
-uploadButton.onclick = () =>
-    (window.location.href = window.location.href.includes('github')
-        ? 'manGoes-reports/processing'
-        : '/processing');
+uploadButton.onclick = () => (window.location.href = '/processing');
 
 // Change labels and watch whether two files have been chosen
 fileHandlers.forEach(handler => {
