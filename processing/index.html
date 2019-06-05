@@ -14,7 +14,7 @@
 
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">manGOes</a>
+        <a class="navbar-brand" href="#">manGoes</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
             aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -38,16 +38,177 @@
         </div>
     </nav>
 
-    <main role="main" class="container">
+    <main role="main" class="container-fluid w-75">
         <div class="row">
-            <div class="col" id="col1">TOP <br></div>
-            <div class="col" id="col2">FRONT <br></div>
+            <div class="col-sm-3">
+                <div class="row h-50 p-3">
+                    <h3 class="title">Gaze per section</h3>
+                    <div class="mx-3 shadow result-box">
+                        <div class="row mx-0 flex-center result-box__header">
+                            <div class="col-4 px-1 table__title">Gaze time</div>
+                            <div class="col-4 px-1 table__title">Glances</div>
+                            <div class="col-4 px-1 table__title">Section</div>
+                        </div>
+                        <div class="row mx-0 py-2 flex-center align-items-start result-box__content">
+                            <div class="col-4 px-1 table__col">
+                                <div class="table__result">12.01s</div>
+                                <div class="table__result">6.03s</div>
+                                <div class="table__result">1.05s</div>
+                                <div class="table__result">4.25s</div>
+                            </div>
+                            <div class="col-4 px-1 table__col">
+                                <div class="table__result">4</div>
+                                <div class="table__result">2</div>
+                                <div class="table__result">1</div>
+                                <div class="table__result">3</div>
+                            </div>
+                            <div class="col-4 px-1 table__col">
+                                <div class="table__result result__section">1</div>
+                                <div class="table__result result__section">2</div>
+                                <div class="table__result result__section">3</div>
+                                <div class="table__result result__section">4</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row h-50 p-3">
+                    <h3 class="title">Grabs per section</h3>
+                    <div class="mx-3 shadow result-box">
+                        <div class="row mx-0 flex-center result-box__header">
+                            <div class="col-4 px-1 table__title">Gaze time</div>
+                            <div class="col-4 px-1 table__title">Glances</div>
+                            <div class="col-4 px-1 table__title">Section</div>
+                        </div>
+                        <div class="row mx-0 py-2 flex-center align-items-start result-box__content">
+                            <div class="col-4 px-1 table__col">
+                                <div class="table__result">12.01s</div>
+                                <div class="table__result">6.03s</div>
+                                <div class="table__result">1.05s</div>
+                                <div class="table__result">4.25s</div>
+                            </div>
+                            <div class="col-4 px-1 table__col">
+                                <div class="table__result">4</div>
+                                <div class="table__result">2</div>
+                                <div class="table__result">1</div>
+                                <div class="table__result">3</div>
+                            </div>
+                            <div class="col-4 px-1 table__col">
+                                <div class="table__result result__section">1</div>
+                                <div class="table__result result__section">2</div>
+                                <div class="table__result result__section">3</div>
+                                <div class="table__result result__section">4</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 p-3">
+                <h3 class="title title--stand">Your stand</h3>
+                <div class="your-stand">
+                    <div class="row h-50">
+                        <div class="col mt-5 mr-3 ml-5">
+                            <div class="stand__section">1</div>
+                        </div>
+                        <div class="col mt-5 ml-3 mr-5">
+                            <div class="stand__section">2</div>
+                        </div>
+                    </div>
+                    <div class="row h-45">
+                        <div class="col mt-3 mr-3 ml-5">
+                            <div class="stand__section">3</div>
+                        </div>
+                        <div class="col mt-3 ml-3 mr-5">
+                            <div class="stand__section">4</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 p-3">
+                <h3 class="title">Analysis results</h3>
+                <div class="shadow result-box result-box--analysis">
+                    <div
+                        class="row mx-0 flex-center justify-content-start result-box__header px-3 result-box__header--analysis table__title">
+                        Hottest sections
+                    </div>
+                    <div
+                        class="row mx-0 py-2 flex-center align-items-start result-box__content result-box__content--analysis">
+                        <div class="col-4 px-1 table__col">
+                            <div class="table__result">12.01s</div>
+                            <div class="table__result">6.03s</div>
+                            <div class="table__result">1.05s</div>
+                            <div class="table__result">4.25s</div>
+                        </div>
+                        <div class="col-4 px-1 table__col">
+                            <div class="table__result">4</div>
+                            <div class="table__result">2</div>
+                            <div class="table__result">1</div>
+                            <div class="table__result">3</div>
+                        </div>
+                        <div class="col-4 px-1 table__col">
+                            <div class="table__result result__section">1</div>
+                            <div class="table__result result__section">2</div>
+                            <div class="table__result result__section">3</div>
+                            <div class="table__result result__section">4</div>
+                        </div>
+                    </div>
+                    <div
+                        class="row mx-0 flex-center justify-content-start result-box__header px-3 result-box__header--analysis table__title">
+                        Most looked at
+                    </div>
+                    <div
+                        class="row mx-0 py-2 flex-center align-items-start result-box__content result-box__content--analysis">
+                        <div class="col-4 px-1 table__col">
+                            <div class="table__result">12.01s</div>
+                            <div class="table__result">6.03s</div>
+                            <div class="table__result">1.05s</div>
+                            <div class="table__result">4.25s</div>
+                        </div>
+                        <div class="col-4 px-1 table__col">
+                            <div class="table__result">4</div>
+                            <div class="table__result">2</div>
+                            <div class="table__result">1</div>
+                            <div class="table__result">3</div>
+                        </div>
+                        <div class="col-4 px-1 table__col">
+                            <div class="table__result result__section">1</div>
+                            <div class="table__result result__section">2</div>
+                            <div class="table__result result__section">3</div>
+                            <div class="table__result result__section">4</div>
+                        </div>
+                    </div>
+                    <div
+                        class="row mx-0 flex-center justify-content-start result-box__header px-3 result-box__header--analysis  table__title">
+                        Longest looked at
+                    </div>
+                    <div
+                        class="row mx-0 py-2 flex-center align-items-start result-box__content result-box__content--analysis">
+                        <div class="col-4 px-1 table__col">
+                            <div class="table__result">12.01s</div>
+                            <div class="table__result">6.03s</div>
+                            <div class="table__result">1.05s</div>
+                            <div class="table__result">4.25s</div>
+                        </div>
+                        <div class="col-4 px-1 table__col">
+                            <div class="table__result">4</div>
+                            <div class="table__result">2</div>
+                            <div class="table__result">1</div>
+                            <div class="table__result">3</div>
+                        </div>
+                        <div class="col-4 px-1 table__col">
+                            <div class="table__result result__section">1</div>
+                            <div class="table__result result__section">2</div>
+                            <div class="table__result result__section">3</div>
+                            <div class="table__result result__section">4</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
     <footer class="footer mt-auto py-2 fixed-bottom bg-dark">
         <div class="container text-center">
-            <span class="text-white">manGOes &copy;</span>
+            <span class="text-white">manGoes &copy;</span>
         </div>
     </footer>
 
