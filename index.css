@@ -1,6 +1,6 @@
 /** Customizers */
 body {
-    padding-top: 5rem;
+    padding-top: 4.2rem;
     background: url('./images/background.svg');
 }
 
@@ -105,9 +105,9 @@ body {
 
 /** Stand */
 .your-stand {
-    height: 88%;
-    width: 90%;
-    background: #d8d8d8;
+    height: 180px;
+    width: 60%;
+    background: #f5f5f5;
     margin: auto;
     margin-top: 3%;
     border-radius: 15px;
@@ -117,14 +117,23 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px;
+    height: 50px;
     width: 100%;
-    background: white;
+    background: #90eaa8;
     border-radius: 10px;
-
-    box-shadow: 15px -30px 10px rgba(0, 0, 0, 0.4) inset;
-
-    font-size: 5em;
-    color: #727272;
+    font-size: 2.3em;
+    color: #ffffff;
 }
 /*! Stand */
+
+/** Help */
+.help {
+    background: #fafafa;
+    font-weight: 300;
+}
+
+.help-icon {
+    width: 40px;
+    height: 40px;
+}
+/*! Help */
