@@ -16,3 +16,10 @@ gazePerSection.forEach((props, sectionId) => {
     gazePerSectionBox.addResult(gazePerSectionBox.glances, props.glances);
     gazePerSectionBox.addResult(gazePerSectionBox.section, sectionId, 'result__section');
 });
+
+const grabsPerSectionBox = new Box('grabs-per-section-box', ['grabs', 'section']);
+grabTimestamps.forEach(() => {
+    // TODO: implement analysis and sorting by section
+    grabsPerSectionBox.addResult(grabsPerSectionBox.grabs, 4);
+    grabsPerSectionBox.addResult(grabsPerSectionBox.section, 1, 'result__section');
+});
