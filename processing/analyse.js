@@ -77,6 +77,46 @@ gazePerSection.forEach((props, sectionId) => {
 });
 const longestLookedAtBox = new GraphBox('longest-looked-at-box', longestLookedAtHeights);
 
+// Hottest sections
+const hottestSectionsBox = document.getElementById('hottest-sections-box');
+assignHottestSections();
+// grabs are the most important, then gaze time, then glances
+function getSectionScore() {
+    const scorePerSection = new Map([[1, 0], [2, 0], [3, 0], [4, 0]]);
+    grabsPerSection.forEach((grabs, sectionId) => {
+        scorePerSection.set(sectionId, scorePerSection.get(sectionId) + grabs * 10);
+    });
+    gazePerSection.forEach((props, sectionId) => {
+        const gazeTime = props.events.reduce(
+            (prev, curr) => prev + getTimeDifferenceInSeconds(curr.in, curr.out),
+            0
+        );
+        scorePerSection.set(
+            sectionId,
+            scorePerSection.get(sectionId) + gazeTime * 2 + props.glances
+        );
+    });
+
+    return scorePerSection;
+}
+
+function assignHottestSections() {
+    const sortedScores = new Map(Array.from(getSectionScore()).sort((a, b) => b[1] - a[1]));
+    const iterator = sortedScores.keys();
+    for (let i = 1; i <= 3; i++) {
+        const sectionId = iterator.next().value;
+        const div = document.createElement('div');
+        div.classList.add(
+            'podium__result',
+            `podium__result--${i}`,
+            `stand__section__color--${sectionId}`,
+            'shadow-sm'
+        );
+        div.innerText = sectionId;
+        hottestSectionsBox.appendChild(div);
+    }
+}
+
 // * Utils
 // Subtract dateIn from dateOut
 function getTimeDifferenceInSeconds(dateIn, dateOut) {

@@ -188,4 +188,35 @@ body {
 .stand__section__color--4 {
     background: #a6ecec;
 }
+
+.podium__image {
+    position: relative;
+    top: 20px;
+    height: 120px;
+}
+
+.podium__result {
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+}
+
+.podium__result--2 {
+    left: 181px;
+    top: 180px;
+}
+
+.podium__result--3 {
+    top: 190px;
+    right: 181px;
+}
+
 /*! Charts */
