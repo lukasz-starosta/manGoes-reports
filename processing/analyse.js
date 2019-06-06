@@ -61,11 +61,21 @@ grabsPerSection.forEach((grabs, sectionId) => {
 });
 
 // Most looked at box initialization
-let heights = new Map();
+const mostLookedAtHeights = new Map();
 gazePerSection.forEach((props, sectionId) => {
-    heights.set(sectionId, props.glances);
+    mostLookedAtHeights.set(sectionId, props.glances);
 });
-const mostLookedAtBox = new GraphBox('most-looked-at-box', heights);
+const mostLookedAtBox = new GraphBox('most-looked-at-box', mostLookedAtHeights);
+
+// Longest looked at box initialization
+const longestLookedAtHeights = new Map();
+gazePerSection.forEach((props, sectionId) => {
+    longestLookedAtHeights.set(
+        sectionId,
+        props.events.reduce((prev, curr) => prev + getTimeDifferenceInSeconds(curr.in, curr.out), 0)
+    );
+});
+const longestLookedAtBox = new GraphBox('longest-looked-at-box', longestLookedAtHeights);
 
 // * Utils
 // Subtract dateIn from dateOut

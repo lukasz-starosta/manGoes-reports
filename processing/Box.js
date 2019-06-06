@@ -32,7 +32,7 @@ export class TableBox extends Box {
 export class GraphBox extends Box {
     constructor(id, chartData) {
         super(id);
-        const heights = new Map(Array.from(chartData).sort());
+        const heights = new Map(Array.from(chartData).sort((a, b) => b[1] - a[1]));
         this.max = heights.values().next().value;
         heights.forEach((height, sectionId) => this.createColumn(height, sectionId));
     }
