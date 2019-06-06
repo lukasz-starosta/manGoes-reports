@@ -141,3 +141,31 @@ body {
     height: 40px;
 }
 /*! Help */
+
+/** Charts */
+.chart__column {
+    position: relative;
+    width: 30px;
+    border-radius: 20px;
+    margin: 25px 12px 5px 12px;
+}
+
+.chart__column::before {
+    content: attr(data-value);
+    font-weight: bold;
+    color: #424242;
+}
+
+.stand__section__color--1 {
+    background: #909eea;
+}
+.stand__section__color--2 {
+    background: #c3efa9;
+}
+.stand__section__color--3 {
+    background: #f9b78f;
+}
+.stand__section__color--4 {
+    background: #a6ecec;
+}
+/*! Charts */

@@ -1,5 +1,5 @@
 import getData from './processJSON.js';
-import Box from './Box.js';
+import { TableBox, GraphBox } from './Box.js';
 
 /**
  * gazePerSection is a map
@@ -42,7 +42,7 @@ function getGrabsPerSection() {
     return grabsPerSection;
 }
 
-const gazePerSectionBox = new Box('gaze-per-section-box', ['gazeTime', 'glances', 'section']);
+const gazePerSectionBox = new TableBox('gaze-per-section-box', ['gazeTime', 'glances', 'section']);
 gazePerSection.forEach((props, sectionId) => {
     const gazeTime = props.events.reduce(
         (prev, curr) => prev + getTimeDifferenceInSeconds(curr.in, curr.out),
@@ -54,11 +54,18 @@ gazePerSection.forEach((props, sectionId) => {
     gazePerSectionBox.addResult(gazePerSectionBox.section, sectionId, 'result__section');
 });
 
-const grabsPerSectionBox = new Box('grabs-per-section-box', ['grabs', 'section']);
+const grabsPerSectionBox = new TableBox('grabs-per-section-box', ['grabs', 'section']);
 grabsPerSection.forEach((grabs, sectionId) => {
     grabsPerSectionBox.addResult(grabsPerSectionBox.grabs, grabs);
     grabsPerSectionBox.addResult(grabsPerSectionBox.section, sectionId, 'result__section');
 });
+
+// Most looked at box initialization
+let heights = new Map();
+gazePerSection.forEach((props, sectionId) => {
+    heights.set(sectionId, props.glances);
+});
+const mostLookedAtBox = new GraphBox('most-looked-at-box', heights);
 
 // * Utils
 // Subtract dateIn from dateOut
