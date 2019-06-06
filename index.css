@@ -146,14 +146,34 @@ body {
 .chart__column {
     position: relative;
     width: 30px;
-    border-radius: 20px;
+    border-radius: 8px;
     margin: 25px 12px 5px 12px;
 }
 
 .chart__column::before {
     content: attr(data-value);
     font-weight: bold;
-    color: #424242;
+    color: #ffffff;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.chart__axis {
+    position: relative;
+    right: 18px;
+    width: 40px;
+    font-weight: lighter;
+    color: #a7a7a7;
+    font-size: 0.9em;
+}
+
+.chart__axis::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: -12px;
+    width: 2px;
+    height: 130px;
+    background: #d4d4d4;
 }
 
 .stand__section__color--1 {
