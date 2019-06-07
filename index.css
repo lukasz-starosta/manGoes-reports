@@ -1,6 +1,7 @@
 /** Customizers */
 body {
     padding-top: 4.2rem;
+    padding-bottom: 4rem;
     background: url('./images/background.svg');
 }
 
