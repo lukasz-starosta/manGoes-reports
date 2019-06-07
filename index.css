@@ -37,6 +37,29 @@ body {
     font-size: 2.3em;
     margin-left: 20px;
 }
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.2;
+        transform: scale(0.98);
+    }
+    50% {
+        opacity: 0.4;
+        transform: scale(1);
+    }
+    75% {
+        opacity: 0.6;
+        transform: scale(1.03);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 /*! Customizers */
 
 /** Result boxes */
@@ -45,6 +68,8 @@ body {
     width: 100%;
     background: #f8f8f8;
     border-radius: 10px;
+    opacity: 0;
+    animation: show 0.3s 0.3s forwards;
 }
 
 .result-box--analysis {
@@ -115,6 +140,7 @@ body {
     margin: auto;
     margin-top: 3%;
     border-radius: 15px;
+    animation: show 0.2s forwards;
 }
 
 .stand__section {
@@ -210,13 +236,13 @@ body {
 }
 
 .podium__result--2 {
-    left: 181px;
-    top: 180px;
+    left: 165px;
+    top: 120px;
 }
 
 .podium__result--3 {
-    top: 190px;
-    right: 181px;
+    top: 127px;
+    right: 165px;
 }
 
 /*! Charts */

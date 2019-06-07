@@ -15,6 +15,20 @@ uploadButton.onclick = () => {
     }
 };
 
+// Check handlers initial state
+fileHandlers.forEach(handler => {
+    if (handler.input.files[0]) {
+        handler.label.textContent = handler.input.files[0].name;
+        handler.hasChosenFile = true;
+        handleFileSaving(handler.input.files[0], handler.input.id);
+    } else {
+        handler.hasChosenFile = false;
+    }
+    if (fileHandlers.every(handler => handler.hasChosenFile)) {
+        uploadButton.classList.remove('disabled');
+    }
+});
+
 // Change labels and watch whether two files have been chosen
 fileHandlers.forEach(handler => {
     handler.input.addEventListener('change', () => {
@@ -31,6 +45,9 @@ fileHandlers.forEach(handler => {
 
 function handleFileSaving(file, name) {
     const filereader = new FileReader();
+    if (sessionStorage.getItem(name)) {
+        sessionStorage.removeItem(name);
+    }
     const saveData = e => sessionStorage.setItem(name, e.target.result);
     filereader.onload = saveData;
 
@@ -38,9 +55,4 @@ function handleFileSaving(file, name) {
 }
 
 // Clear session storage
-if (sessionStorage.has('inputFileTopCamera')) {
-    sessionStorage.removeItem('inputFileTopCamera');
-}
-if (sessionStorage.has('inputFileFrontCamera')) {
-    sessionStorage.removeItem('inputFileFrontCamera');
-}
+sessionStorage.clear();
