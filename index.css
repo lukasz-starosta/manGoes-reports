@@ -5,6 +5,18 @@ body {
     background: url('./images/background.svg');
 }
 
+@media screen and (max-width: 720px) {
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 596px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+
 .starter-template {
     padding: 3rem 1.5rem;
     text-align: center;
@@ -15,13 +27,37 @@ body {
     background-color: #5975f3;
 }
 
-.btn[value='Upload'] {
-    width: 20%;
-    margin: 0 auto;
+@media screen and (min-width: 596px) {
+    .btn[value='Upload'] {
+        width: 220px;
+        margin: 0 auto;
+    }
+}
+
+.card-deck {
+    justify-content: center;
+}
+
+@media screen and (min-width: 1040px) {
+    .card-deck .card {
+        flex: 0 1 40%;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card-deck .card {
+        flex: 0 1 80%;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 }
 
 .btn.disabled {
     pointer-events: none;
+    background-color: #c7c7c7;
+    border-color: #c7c7c7;
 }
 
 .flex-center {
